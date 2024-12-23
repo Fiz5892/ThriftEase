@@ -100,7 +100,7 @@ const verifyOTP = async (token: string, otpInput: string): Promise<boolean> => {
 
 // Function: Send Password Reset Email
 const sendResetEmail = async (email: string, token: string): Promise<void> => {
-  const resetUrl = `http://localhost:5173/reset-password?token=${token}`;
+  const resetUrl = `https://thriftease.vercel.app/reset-password?token=${token}`;
   const mailOptions = {
     from: process.env.EMAIL_USER, // Alamat pengirim dari konfigurasi mailer
     to: email,
